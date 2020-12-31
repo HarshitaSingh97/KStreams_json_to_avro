@@ -1,0 +1,20 @@
+spring.cloud.stream:
+  function:
+    definition: jsonToAvroProcessor
+  bindings:
+    jsonToAvroProcessor-in-0:
+      destination: json_data3
+    jsonToAvroProcessor-out-0:
+      destination: avro_data
+  kafka:
+    binder:
+      brokers:
+        - localhost:9091
+        - localhost:9092
+
+    streams:
+      kafka:
+        streams:
+          binder:
+            configuration:
+              spring.json.trusted.packages: '*'

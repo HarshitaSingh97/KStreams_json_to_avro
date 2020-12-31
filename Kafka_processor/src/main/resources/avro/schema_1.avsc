@@ -1,0 +1,10 @@
+{
+    "type": "record",
+    "namespace": "com.kafkaprocessor",
+    "name": "json_to_avro",
+    "version": "1",
+    "fields": [
+        { "name": "name", "type": "string", "doc":"Name" },
+        { "name": "try_no", "type": "int", "doc":"try no." }
+    ]
+}
